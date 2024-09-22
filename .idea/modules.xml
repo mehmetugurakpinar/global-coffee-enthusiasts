@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/coffee-social-platform.iml" filepath="$PROJECT_DIR$/coffee-social-platform.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/coffee-app/coffee-social-platform.coffee-app.iml" filepath="$PROJECT_DIR$/.idea/modules/coffee-app/coffee-social-platform.coffee-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/coffee-app/domain/coffee-social-platform.coffee-app.domain.iml" filepath="$PROJECT_DIR$/.idea/modules/coffee-app/domain/coffee-social-platform.coffee-app.domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/coffee-app/domain/coffee-social-platform.coffee-app.domain.main.iml" filepath="$PROJECT_DIR$/.idea/modules/coffee-app/domain/coffee-social-platform.coffee-app.domain.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/coffee-app/domain/coffee-social-platform.coffee-app.domain.test.iml" filepath="$PROJECT_DIR$/.idea/modules/coffee-app/domain/coffee-social-platform.coffee-app.domain.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/coffee-app/infra/coffee-social-platform.coffee-app.infra.iml" filepath="$PROJECT_DIR$/.idea/modules/coffee-app/infra/coffee-social-platform.coffee-app.infra.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/coffee-app/infra/coffee-social-platform.coffee-app.infra.main.iml" filepath="$PROJECT_DIR$/.idea/modules/coffee-app/infra/coffee-social-platform.coffee-app.infra.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/coffee-app/infra/coffee-social-platform.coffee-app.infra.test.iml" filepath="$PROJECT_DIR$/.idea/modules/coffee-app/infra/coffee-social-platform.coffee-app.infra.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/coffee-app/coffee-social-platform.coffee-app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/coffee-app/coffee-social-platform.coffee-app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/coffee-app/coffee-social-platform.coffee-app.test.iml" filepath="$PROJECT_DIR$/.idea/modules/coffee-app/coffee-social-platform.coffee-app.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/coffee-social-platform.main.iml" filepath="$PROJECT_DIR$/.idea/modules/coffee-social-platform.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/coffee-social-platform.test.iml" filepath="$PROJECT_DIR$/.idea/modules/coffee-social-platform.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/untitled.iml" filepath="$PROJECT_DIR$/untitled.iml" />
+    </modules>
+  </component>
+</project>
