@@ -1,0 +1,5 @@
+rootProject.name = 'coffee-social-platform'
+
+include 'coffee-app'
+include 'coffee-app:domain'
+include 'coffee-app:infra'

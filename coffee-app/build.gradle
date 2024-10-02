@@ -1,0 +1,22 @@
+description = 'Coffee API'
+jar.archiveBaseName.set('coffee-app')
+
+apply plugin: 'org.springframework.boot'
+
+dependencies {
+	implementation project('infra')
+}
+
+springBoot {
+	mainClass = 'com.globalcoffeeenthusiast.CoffeeSocialPlatformApplication'
+}
+
+bootRun {
+	if (project.hasProperty('args')) {
+		args project.args.split(',')
+	}
+}
+
+build {
+	dependsOn 'domain:build', 'infra:build'
+}
