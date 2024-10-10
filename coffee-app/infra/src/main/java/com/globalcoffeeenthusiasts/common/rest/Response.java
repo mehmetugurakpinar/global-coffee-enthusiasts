@@ -5,6 +5,10 @@ public class Response<T> {
     private T data;
     private ErrorResponse errors;
 
+    public static <T> Response<T> ok(T data) {
+        return new Response<>(data);
+    }
+
     public Response() {
     }
 

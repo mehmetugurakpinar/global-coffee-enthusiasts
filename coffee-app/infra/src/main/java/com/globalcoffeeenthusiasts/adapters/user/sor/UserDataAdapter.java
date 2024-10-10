@@ -7,8 +7,13 @@ import com.globalcoffeeenthusiasts.user.model.User;
 import com.globalcoffeeenthusiasts.user.port.UserPort;
 import com.globalcoffeeenthusiasts.user.usecase.UserPaginate;
 import com.globalcoffeeenthusiasts.user.usecase.create.UserCreate;
+import com.globalcoffeeenthusiasts.user.usecase.update.UserUpdate;
 import org.apache.commons.lang3.NotImplementedException;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
 
 @Service
 public class UserDataAdapter implements UserPort {
@@ -37,6 +42,24 @@ public class UserDataAdapter implements UserPort {
     }
 
     public void delete(String id) {
-        throw new NotImplementedException("Not implemented yet");
+        userRepository.deleteById(id);
+    }
+
+    public void update(UserUpdate userUpdate) {
+        UserEntity userEntity = userRepository.findById(userUpdate.getId())
+                .orElseThrow(() -> new IllegalStateException("User not found"));
+        UserEntity.of(
+                userUpdate.getId(),
+                userUpdate.getUsername(),
+                userUpdate.getEmail(),
+                userUpdate.getPassword(),
+                userUpdate.getProfilePictureUrl());
+        userRepository.save(userEntity);
+    }
+
+    public List<User> retrieveAll() {
+        return StreamSupport.stream(userRepository.findAll().spliterator(), false)
+                .map(UserEntity::toModel)
+                .collect(Collectors.toList());
     }
 }

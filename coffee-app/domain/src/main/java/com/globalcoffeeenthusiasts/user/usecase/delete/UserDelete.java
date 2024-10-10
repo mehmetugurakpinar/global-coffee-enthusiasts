@@ -1,39 +1,17 @@
 package com.globalcoffeeenthusiasts.user.usecase.delete;
 
 import com.globalcoffeeenthusiasts.common.model.UseCase;
-import com.globalcoffeeenthusiasts.user.model.User;
-import com.globalcoffeeenthusiasts.user.usecase.create.UserCreate;
 import lombok.Builder;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
+import lombok.Data;
 
-@Getter
-@EqualsAndHashCode
-@Builder(builderMethodName = "userDelete", builderClassName = "Builder")
+@Data
+@Builder
 public class UserDelete  implements UseCase {
     private String id;
 
-    private UserDelete(UserDelete.Builder builder) {
-        this.id = builder.id;
-    }
-
-    public static UserDelete.Builder userDelete() {
-        return new UserDelete.Builder();
-    }
-
-    public User toUser() {
-        return User.user()
-                .id(this.id)
+    public static UserDelete from(String id) {
+        return UserDelete.builder()
+                .id(id)
                 .build();
-    }
-
-    public static final class Builder {
-
-        private Builder() {
-        }
-
-        public UserDelete build() {
-            return new UserDelete(this);
-        }
     }
 }

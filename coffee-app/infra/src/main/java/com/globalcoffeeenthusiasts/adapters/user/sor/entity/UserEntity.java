@@ -54,4 +54,8 @@ public class UserEntity extends AbstractEntity {
     public static UserEntity of(String username, String email, String password) {
         return new UserEntity(String.valueOf(UUID.randomUUID()), username, email, password, "");
     }
+
+    public static UserEntity of(String id, String username, String email, String password, String profilePictureUrl) {
+        return new UserEntity(id, username, email, password, "");
+    }
 }

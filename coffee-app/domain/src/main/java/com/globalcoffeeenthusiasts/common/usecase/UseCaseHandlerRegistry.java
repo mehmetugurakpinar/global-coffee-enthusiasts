@@ -8,9 +8,9 @@ import org.slf4j.LoggerFactory;
 
 public class UseCaseHandlerRegistry {
     private static final Logger log = LoggerFactory.getLogger(UseCaseHandlerRegistry.class);
-    private Map<Class<? extends UseCase>, UseCaseHandler<?, ? extends UseCase>> registryForUseCaseHandlers = new HashMap();
-    private Map<Class<? extends UseCase>, VoidUseCaseHandler<? extends UseCase>> registryForVoidUseCaseHandlers = new HashMap();
-    private Map<Class<?>, NoUseCaseHandler<?>> registryForNoUseCaseHandlers = new HashMap();
+    private final Map<Class<? extends UseCase>, UseCaseHandler<?, ? extends UseCase>> registryForUseCaseHandlers = new HashMap<>();
+    private final Map<Class<? extends UseCase>, VoidUseCaseHandler<? extends UseCase>> registryForVoidUseCaseHandlers = new HashMap<>();
+    private final Map<Class<?>, NoUseCaseHandler<?>> registryForNoUseCaseHandlers = new HashMap<>();
     public static final UseCaseHandlerRegistry INSTANCE = new UseCaseHandlerRegistry();
 
     private UseCaseHandlerRegistry() {
