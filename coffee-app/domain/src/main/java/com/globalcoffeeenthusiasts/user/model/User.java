@@ -1,7 +1,5 @@
 package com.globalcoffeeenthusiasts.user.model;
 
-import com.globalcoffeeenthusiasts.user.usecase.create.UserCreate;
-import com.globalcoffeeenthusiasts.user.usecase.update.UserUpdate;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -40,20 +38,6 @@ public class User {
         public User build() {
             return new User(this);
         }
-    }
-
-    public void createUser(String username, String email, String password) {
-        this.username = username;
-        this.email = email;
-        this.password = password;
-    }
-
-    public UserCreate toUseCase() {
-        return UserCreate.userCreate()
-                .username(this.username)
-                .email(this.email)
-                .password(this.password)
-                .build();
     }
 
     public void updateUser(String username, String email, String password, String profilePictureUrl) {
